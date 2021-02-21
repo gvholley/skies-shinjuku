@@ -53,6 +53,8 @@ form.addEventListener("submit", e => {
         weather[0]["icon"]
       }.svg`;
 
+     ["description"] == "clear sky" ? "<h4>Groovy</h4>" : "<h4>Nope</h4>";
+
       const li = document.createElement("li");
       li.classList.add("city");
       const markup = `
@@ -68,6 +70,7 @@ form.addEventListener("submit", e => {
           <figcaption>${weather[0]["description"]}</figcaption>
         </figure>
       `;
+
       li.innerHTML = markup;
       list.appendChild(li);
     })
