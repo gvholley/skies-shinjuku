@@ -53,7 +53,7 @@ form.addEventListener("submit", e => {
         weather[0]["icon"]
       }.svg`;
 
-     ["description"] == "clear sky" ? "<h4>Groovy</h4>" : "<h4>Nope</h4>";
+     //const accDes =`${ weather[0]["description"] == "clear sky" ? "<h4>Groovy</h4>" : "<h4>Nope</h4>"  }`
 
       const li = document.createElement("li");
       li.classList.add("city");
@@ -67,7 +67,7 @@ form.addEventListener("submit", e => {
           <img class="city-icon" src="${icon}" alt="${
         weather[0]["description"]
       }">
-          <figcaption>${weather[0]["description"]}</figcaption>
+          <figcaption>${ weather[0]["description"] == "clear sky" ? "<h4>Groovy</h4>" : "<h4>Nope</h4>"  }</figcaption>
         </figure>
       `;
 
